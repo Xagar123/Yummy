@@ -16,6 +16,8 @@
 		8D6AFCCB2AB894DF00E45011 /* Extension+UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D6AFCCA2AB894DF00E45011 /* Extension+UIView.swift */; };
 		8D6AFCCD2AB895FC00E45011 /* OnBoardingSlide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D6AFCCC2AB895FC00E45011 /* OnBoardingSlide.swift */; };
 		8D6AFCCF2AB8983B00E45011 /* OnBoardingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D6AFCCE2AB8983B00E45011 /* OnBoardingCollectionViewCell.swift */; };
+		8D7B3EE62ACB273E0026F5C6 /* DishLandscapeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D7B3EE42ACB273E0026F5C6 /* DishLandscapeCollectionViewCell.swift */; };
+		8D7B3EE72ACB273E0026F5C6 /* DishLandscapeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8D7B3EE52ACB273E0026F5C6 /* DishLandscapeCollectionViewCell.xib */; };
 		8D9C39CBB0AEF8664F4B5259 /* Pods_Yummy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A954205A9FE6B180C43128F /* Pods_Yummy.framework */; };
 		8DBBEAAC2ABEA9EC00D2EF7C /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DBBEAAB2ABEA9EC00D2EF7C /* CardView.swift */; };
 		8DBBEAB02ABEB0C900D2EF7C /* DishPoterateCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DBBEAAE2ABEB0C900D2EF7C /* DishPoterateCollectionViewCell.swift */; };
@@ -42,6 +44,8 @@
 		8D6AFCCA2AB894DF00E45011 /* Extension+UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+UIView.swift"; sourceTree = "<group>"; };
 		8D6AFCCC2AB895FC00E45011 /* OnBoardingSlide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingSlide.swift; sourceTree = "<group>"; };
 		8D6AFCCE2AB8983B00E45011 /* OnBoardingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingCollectionViewCell.swift; sourceTree = "<group>"; };
+		8D7B3EE42ACB273E0026F5C6 /* DishLandscapeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishLandscapeCollectionViewCell.swift; sourceTree = "<group>"; };
+		8D7B3EE52ACB273E0026F5C6 /* DishLandscapeCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DishLandscapeCollectionViewCell.xib; sourceTree = "<group>"; };
 		8DBBEAAB2ABEA9EC00D2EF7C /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		8DBBEAAE2ABEB0C900D2EF7C /* DishPoterateCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishPoterateCollectionViewCell.swift; sourceTree = "<group>"; };
 		8DBBEAAF2ABEB0C900D2EF7C /* DishPoterateCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DishPoterateCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -156,6 +160,15 @@
 			path = Extension;
 			sourceTree = "<group>";
 		};
+		8D7B3EE32ACB27120026F5C6 /* DishLandScape */ = {
+			isa = PBXGroup;
+			children = (
+				8D7B3EE42ACB273E0026F5C6 /* DishLandscapeCollectionViewCell.swift */,
+				8D7B3EE52ACB273E0026F5C6 /* DishLandscapeCollectionViewCell.xib */,
+			);
+			path = DishLandScape;
+			sourceTree = "<group>";
+		};
 		8DBBEAAA2ABEA9D400D2EF7C /* CardView */ = {
 			isa = PBXGroup;
 			children = (
@@ -176,6 +189,7 @@
 		8DC099442ABE1F5D008BDE77 /* CollectionViewCell */ = {
 			isa = PBXGroup;
 			children = (
+				8D7B3EE32ACB27120026F5C6 /* DishLandScape */,
 				8DBBEAAD2ABEB0A000D2EF7C /* DishPoterateCollectionViewCell */,
 				8DC099452ABE1F72008BDE77 /* CategoryCollectionViewCell */,
 			);
@@ -271,6 +285,7 @@
 				8D6AFCBC2AB88F1800E45011 /* LaunchScreen.storyboard in Resources */,
 				8D6AFCB92AB88F1800E45011 /* Assets.xcassets in Resources */,
 				8DBBEAB12ABEB0C900D2EF7C /* DishPoterateCollectionViewCell.xib in Resources */,
+				8D7B3EE72ACB273E0026F5C6 /* DishLandscapeCollectionViewCell.xib in Resources */,
 				8D6AFCB72AB88F1700E45011 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -332,6 +347,7 @@
 				8D6AFCCF2AB8983B00E45011 /* OnBoardingCollectionViewCell.swift in Sources */,
 				8D6AFCC82AB8920800E45011 /* OnBoardingViewController.swift in Sources */,
 				8DDB17942ABCAECD00BCA394 /* HomeViewController.swift in Sources */,
+				8D7B3EE62ACB273E0026F5C6 /* DishLandscapeCollectionViewCell.swift in Sources */,
 				8DC0994B2ABE224C008BDE77 /* DishCategory.swift in Sources */,
 				8DC0994D2ABE2551008BDE77 /* String+Extension.swift in Sources */,
 				8DBBEAAC2ABEA9EC00D2EF7C /* CardView.swift in Sources */,

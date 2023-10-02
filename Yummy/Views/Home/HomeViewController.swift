@@ -13,6 +13,7 @@ class HomeViewController: UIViewController {
     
     @IBOutlet weak var categoryCollectionView: UICollectionView!
     @IBOutlet weak var popularDishCollectionView: UICollectionView!
+    @IBOutlet weak var specialCollectionView: UICollectionView!
     
     
     var categories:[DishCategory] = [
@@ -31,6 +32,11 @@ class HomeViewController: UIViewController {
         .init(id: "id1", name: "SouthIndian", description: "Good in taste", image: "https://picsum.photos/100/200", calories: 34.41),
         .init(id: "id1", name: "SouthIndian", description: "Good in taste", image: "https://picsum.photos/100/200", calories: 34.41),
     ]
+    
+    var special:[Dish] = [
+        .init(id: "id1", name: "SouthIndian", description: "Good in taste", image: "https://picsum.photos/100/200", calories: 34.41),
+        .init(id: "id1", name: "SouthIndian", description: "Good in taste", image: "https://picsum.photos/100/200", calories: 34.41),
+    ]
 
     //MARK: - Lifecycle
     override func viewDidLoad() {
@@ -38,6 +44,9 @@ class HomeViewController: UIViewController {
         
         categoryCollectionView.delegate = self
         categoryCollectionView.dataSource = self
+        
+        specialCollectionView.delegate = self
+        specialCollectionView.dataSource = self
         registerCell()
     }
     
@@ -50,13 +59,15 @@ class HomeViewController: UIViewController {
         
         popularDishCollectionView.register(UINib(nibName: DishPoterateCollectionViewCell.identifier, bundle: nil), forCellWithReuseIdentifier: DishPoterateCollectionViewCell.identifier)
         
+        specialCollectionView.register(UINib(nibName: DishLandscapeCollectionViewCell.identifer, bundle: nil), forCellWithReuseIdentifier: DishLandscapeCollectionViewCell.identifer)
+        
     }
     
    
 }
 
 //MARK: -Extensions
-extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSource {
+extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
@@ -65,6 +76,8 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
             return categories.count
         case popularDishCollectionView:
             return popularDish.count
+        case specialCollectionView:
+            return special.count
         default:
             return 0
         }
@@ -84,10 +97,25 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
             cell.setup(dish: popularDish[indexPath.row])
             
             return cell
+            
+        case specialCollectionView:
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: DishLandscapeCollectionViewCell.identifer, for: indexPath) as! DishLandscapeCollectionViewCell
+            cell.setup(dish: special[indexPath.row])
+            return cell
         default:
            return UICollectionViewCell()
         }
       
     }
+    
+//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+//        switch collectionView {
+//        case specialCollectionView:
+//            return CGSize(width: 330, height: 90)
+//
+//        default:
+//            return CGSize(width: 200, height: 200)
+//        }
+//    }
    
 }
